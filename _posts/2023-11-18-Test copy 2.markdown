@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "Hibernate Join Table: Splitting Many-to-Many Connection3"
+title: "Hibernate Join Table: Splitting Many-to-Many Connection4"
 ---
 Greeting! As a beginner programmer, I've developed a Spring Boot application that saves recipes and calculates their nutritional values. I've employed a PostgreSQL database, managed through a CRUD API, to handle all the ingredients.
+
 ## Problem:
 My challenge arose in establishing a connection between the ingredient and recipe tables, which involves a many-to-many relationship. The join-table would be created by Hibernate with the right annotations. However, in my case, there is additional data in this table, as we need to store the amount of the ingredient as well.
 ### Food:
