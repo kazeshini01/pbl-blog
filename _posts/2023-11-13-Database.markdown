@@ -6,25 +6,25 @@ Greeting! As a beginner programmer, I've developed a Spring Boot application tha
 ## Problem:
 My challenge arose in establishing a connection between the ingredient and recipe tables, which involves a many-to-many relationship. The join-table would be created by Hibernate with the right annotations. However, in my case, there is additional data in this table, as we need to store the amount of the ingredient as well.
 ### Food 
-| Column        | Type                       |
-|---------------|----------------------------|
-| food_id       | big init (primary key)     |
-| name          | character(255)             |
-| calories      | double precision           |
-| protein       | double precision           |
-| carbohydrates | double precision           |
-| fat           | double precision           |
-| fiber         | double precision           |
-| measurement   | character(255)             |
+| Column         | Type                    |
+| -------------- | ----------------------- |
+| food_id        | big init (primary key)  |
+| name           | character(255)          |
+| calories       | double precision        |
+| protein        | double precision        |
+| carbohydrates  | double precision        |
+| fat            | double precision        |
+| fiber          | double precision        |
+| measurement    | character(255)          |
 
 ### Recipe
-| Column          | Type                   |
-|-----------------|------------------------|
-| food_id         | big init (primary key) |
-| name            | character(255)         |
-| date_of_posting | Local dat              |
-| description     | Text                   |
-| manual          | Text                   |
+| Column          | Type                    |
+| --------------- | ----------------------- |
+| food_id         | big init (primary key)  |
+| name            | character(255)          |
+| date_of_posting | Local dat               |
+| description     | Text                    |
+| manual          | Text                    |
 
  
 ## Solution
