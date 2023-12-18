@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Hibernate Join Table: Splitting Many-to-Many Connectionnnnn"
+title: "Hibernate Join Table: Splitting Many-to-Many Connection"
 ---
 Greeting! As a beginner programmer, I've developed a Spring Boot application that saves recipes and calculates their nutritional values. I've employed a PostgreSQL database, managed through a CRUD API, to handle all the ingredients.
 ## Problem:
@@ -18,13 +18,13 @@ My challenge arose in establishing a connection between the ingredient and recip
 | measurement    | character(255)         |
 
 ### Recipe
-| Column          | Type                   |
-| --------------- | -----------------------|
-| food_id         | big init (primary key) |
-| name            | character(255)         |
-| date_of_posting | Local dat              |
-| description     | Text                   |
-| manual          | Text                   |
+| Column          | Type                    |
+| --------------- | ----------------------- |
+| food_id         | big init (primary key)  |
+| name            | character(255)          |
+| date_of_posting | Local dat               |
+| description     | Text                    |
+| manual          | Text                    |
 
  
 ## Solution
