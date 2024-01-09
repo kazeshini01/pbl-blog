@@ -2,10 +2,10 @@
 layout: post
 title: "Hibernate Join Table: Splitting Many-to-Many Connection"
 ---
-Greeting! As a beginner programmer, I've developed a Spring Boot application that saves recipes and calculates their nutritional values. I've employed a PostgreSQL database, managed through a CRUD API, to handle all the ingredients.
+Greetings! As a beginner programmer, I've developed a Spring Boot application that saves recipes and calculates their nutritional values. I've used a PostgreSQL database, managed through a CRUD API, to handle all the entities.
 ## Problem:
-My challenge arose in establishing a connection between the ingredient and recipe tables, which involves a many-to-many relationship. The join-table would be created by Hibernate with the right annotations. However, in my case, there is additional data in this table, as we need to store the amount of the ingredient as well.
-### Food:
+My challenge arose in establishing a connection between the ingredient and recipe tables, which involves a many-to-many relationship. The join-table would be created by Hibernate with the right annotations. However, in my case, there is additional data in this table, as we need to store the amount of the ingredient as well. Here is my 2 table:
+### Ingredient:
 
 | Column | Type |
 | --- | --- |
@@ -30,7 +30,15 @@ My challenge arose in establishing a connection between the ingredient and recip
 
  
 ## Solution
-I created the join table manually. Instead of using a many-to-many relationship, I introduced a new entity with two many-to-one relations.
+There were 2 distinct solutions: 
+1. Automatic Table Generation:
+    * Approach: Allow Hibernate to automatically generate the join table.
+    * Process: The table is created seamlessly, but additional data such as the RecipeIngredient ID and associated quantities need manual insertion into a separate table.
+2. Manual Creation of Join Table:
+    * Approach: Craft the join table as a new entity (RecipeIngredient) manually.
+    * Process: Offers complete control over the table structure, allowing explicit mapping of relationships. However, it introduces more complexity and necessitates managing the join table as a standalone entity.
+Although the first method makes it easier to read and work with i have chosen the second soultion. This minimalizes the number of the tables, and provides more conroll. 
+Here is my new entity:
 ```java
 @Entity
 public class RecipeIngredient {
