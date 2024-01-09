@@ -37,8 +37,10 @@ There were 2 distinct solutions:
 2. Manual Creation of Join Table:
     * Approach: Craft the join table as a new entity (RecipeIngredient) manually.
     * Process: Offers complete control over the table structure, allowing explicit mapping of relationships. However, it introduces more complexity and necessitates managing the join table as a standalone entity.
-Although the first method makes it easier to read and work with i have chosen the second soultion. This minimalizes the number of the tables, and provides more conroll. 
+Although the first method makes it easier to read and work with i have chosen the second soultion. This minimalizes the number of the tables, and provides more conroll.
+
 Here is my new entity:
+
 ```java
 @Entity
 public class RecipeIngredient {
